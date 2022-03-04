@@ -21,6 +21,7 @@ class TokenResizerHUD {
 		if (currentWidth <= 1 || currentHeight <= 1 || currentWidth != currentHeight) {
 			tokenSize = {'width': currentWidth / 2, 'height': currentHeight / 2};
 		}
+		if (tokenSize.width < 0.5 || tokenSize.height < 0.5) return
 		tokenDocument.update(tokenSize);
 	}
 
